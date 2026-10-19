@@ -1,0 +1,22 @@
+$kind: http-request
+description: ""
+url: http://localhost:3000/api/products
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"product_name\": \"Gaming Mouse\",\r
+
+    \    \"category\": \"Accessories\",\r
+
+    \    \"price\": 550,\r
+
+    \    \"brand\": \"Razer\",\r
+
+    \    \"description\": \"High precision gaming mouse\",\r
+
+    \    \"stock_quantity\": 15\r
+
+    }"
+order: 2000

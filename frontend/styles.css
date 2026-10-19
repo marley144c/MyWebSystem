@@ -1,0 +1,365 @@
+/* ================================
+   GENERAL PAGE STYLING
+================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #073868;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+/* Main container */
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+h1 {
+    text-align: center;
+    color: #0f172a;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #2563eb;
+    margin: 12px auto 30px;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #0f172a;
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   MESSAGE BOX
+================================ */
+
+#message {
+    display: none;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    border-left: 5px solid #2563eb;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+#productForm {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 13px 15px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #ffffff;
+    color: #1e293b;
+    transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.full {
+    grid-column: 1 / 3;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+button {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* Save button */
+
+.save-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* Cancel button */
+
+.cancel-btn {
+    background: #64748b;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #475569;
+}
+
+
+/* Edit button */
+
+.edit-btn {
+    background: #f59e0b;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #d97706;
+}
+
+
+/* Delete button */
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+
+/* ================================
+   TABLE
+================================ */
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: white;
+}
+
+thead {
+    background: #0f172a;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+td {
+    padding: 14px 15px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* Rounded table corners */
+
+thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+
+/* ================================
+   ACTION BUTTONS
+================================ */
+
+.actions {
+    white-space: nowrap;
+}
+
+.actions button {
+    margin-right: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+
+/* ================================
+   PRICE
+================================ */
+
+td:nth-child(4) {
+    font-weight: 600;
+    color: #2563eb;
+}
+
+
+/* ================================
+   STOCK
+================================ */
+
+td:nth-child(7) {
+    font-weight: 600;
+}
+
+
+/* ================================
+   EMPTY TABLE MESSAGE
+================================ */
+
+.empty-message {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 1000px) {
+
+    .container {
+        width: 96%;
+        padding: 25px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        margin: 15px auto;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #productForm {
+        grid-template-columns: 1fr;
+    }
+
+    .full {
+        grid-column: 1;
+    }
+
+    .save-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    #productForm {
+        padding: 15px;
+    }
+
+    input,
+    textarea {
+        font-size: 14px;
+    }
+}

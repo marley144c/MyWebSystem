@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ICT251 MARLEY144C</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>ICT251 Product Management System</h1>
+
+    <div id="message"></div>
+
+    <form id="productForm">
+
+        <input
+            type="text"
+            id="product_name"
+            placeholder="Product Name"
+            required
+        >
+
+        <input
+            type="text"
+            id="category"
+            placeholder="Category"
+            required
+        >
+
+        <input
+            type="number"
+            id="price"
+            placeholder="Price"
+            step="0.01"
+            required
+        >
+
+        <input
+            type="text"
+            id="brand"
+            placeholder="Brand"
+            required
+        >
+
+        <input
+            type="number"
+            id="stock_quantity"
+            placeholder="Stock Quantity"
+            min="0"
+            required
+        >
+
+        <textarea
+            id="description"
+            class="full"
+            placeholder="Product Description"
+            rows="3"
+        ></textarea>
+
+        <button type="submit" class="save-btn">
+            Save Product
+        </button>
+
+        <button
+            type="button"
+            class="cancel-btn"
+            onclick="resetForm()"
+        >
+            Cancel
+        </button>
+
+    </form>
+
+    <h2>Products</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Brand</th>
+                <th>Description</th>
+                <th>Stock</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="productTableBody"></tbody>
+    </table>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
